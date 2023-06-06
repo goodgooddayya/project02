@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>图书馆座位预约</title>
+</head>
+<body>
+<h1>图书馆座位预约</h1>
+<div>
+  <h2>预约座位</h2>
+  <form>
+    <label>自习室或阅览室：</label>
+    <input type="radio" name="room-type" value="study-room" checked>自习室
+    <input type="radio" name="room-type" value="reading-room">阅览室
+    <br>
+    <label>座位号：</label>
+    <input type="text" name="seat-number" required>
+    <br>
+    <label>预约日期：</label>
+    <input type="date" name="date" required>
+    <br>
+    <label>开始时间：</label>
+    <input type="time" name="start-time" required>
+    <br>
+    <label>结束时间：</label>
+    <input type="time" name="end-time" required>
+    <br>
+    <label>姓名：</label>
+    <input type="text" name="name" required>
+    <br>
+    <label>学号：</label>
+    <input type="text" name="student-id" required>
+    <br>
+    <label>联系电话：</label>
+    <input type="tel" name="phone" pattern="[0-9]{11}" required>
+    <br>
+    <input type="submit" value="提交">
+  </form>
+</div>
+<hr>
+<div>
+  <h2>座位查询</h2>
+  <form>
+    <label>自习室或阅览室：</label>
+    <input type="radio" name="room-type" value="study-room" checked>自习室
+    <input type="radio" name="room-type" value="reading-room">阅览室
+    <br>
+    <input type="submit" value="查询">
+  </form>
+  <!-- 在此处显示查询结果 -->
+</div>
+<hr>
+<div>
+  <h2>预约查询</h2>
+  <form>
+    <label>学号：</label>
+    <input type="text" name="student-id" required>
+    <br>
+    <input type="submit" value="查询">
+  </form>
+  <!-- 在此处显示查询结果 -->
+</div>
+<hr>
+<div>
+  <h2>预约取消</h2>
+  <form>
+    <label>学号：</label>
+    <input type="text" name="student-id" required>
+    <br>
+    <label>预约日期：</label>
+    <input type="date" name="date" required>
+    <br>
+    <label>开始时间：</label>
+    <input type="time" name="start-time" required>
+    <br>
+    <input type="submit" value="取消预约">
+  </form>
+</div>
+</body>
+</html>

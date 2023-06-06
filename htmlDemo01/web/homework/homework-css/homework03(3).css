@@ -1,0 +1,13 @@
+table{
+    border-collapse:collapse;/*改变边框*/
+    border: 1px solid #000000;
+    font-size: 15px;
+}
+img{
+    align-content: center;
+}
+table td{
+    border-collapse:collapse;/*改变边框*/
+    border: 1px solid #000000;
+    align-content: center;
+}

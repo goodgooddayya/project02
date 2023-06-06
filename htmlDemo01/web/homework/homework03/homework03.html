@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人简历注册</title>
+    <link rel="stylesheet" href="../homework-css/homework03.css">
+</head>
+<body>
+<div class="container">
+    <h3 style="text-align: center">个人信息注册</h3>
+    <hr>
+    <form class="sign-up" action="#">
+        <label>姓名：</label>
+        <input type="text" name="per-name" required>
+        <br>
+        <label>性别：</label>
+        <input type="radio" name="gender" value="male" checked>男
+        <input type="radio" name="gender" value="female">女
+        <br>
+        <label>出生年月：</label>
+        <input type="date" name="birthtime" required>
+        <br>
+        <label>籍贯：</label>
+        <select name="school">
+            <option>广东省</option>
+            <option>湖南省</option>
+            <option>江西省</option>
+        </select>
+        <br>
+        <label>兴趣爱好：</label>
+        <input type="text" name="favorite">
+        <br>
+        <label>地址：</label>
+        <input type="text" name="address">
+        <br>
+        <label>联系电话：</label>
+        <input type="tel" name="phone" pattern="^1[3456789]\d{9}$
+            " required>
+        <br>
+        <label>学校：</label>
+        <select name="school">
+            <option>华强大学</option>
+            <option>江南大学</option>
+            <option>中央大学</option>
+        </select>
+        <br>
+        <label>专业：</label>
+        <select name="major">
+            <option value="">计算机科学与技术</option>
+            <option value="">软件工程</option>
+            <option value="">网络工程</option>
+            <option value="">信息安全</option>
+            <option value="">物联网工程</option>
+            <option value="">数字媒体技术</option>
+            <option value="">智能科学与技术</option>
+            <option value="">空间信息与数字技术</option>
+            <option value="">电子与计算机工程</option>
+        </select>
+        <br>
+        <label>专业排名：</label>
+        <input type="text" name="number"><br>
+        <label>奖励情况：</label>
+        <br>
+        <textarea name="message" rows="4" cols="50" maxlength="100" placeholder="在此输入你参加项目或竞赛的情况，也可以是课程成绩"></textarea><br>
+        <label>专业技能名称：</label>
+        <select name="tech">
+            <optgroup label="基础技术">
+                <option value="html">HTML</option>
+                <option value="css">CSS</option>
+                <option value="javascript">JavaScript</option>
+            </optgroup>
+            <optgroup label="前端框架">
+                <option value="vue">Vue</option>
+                <option value="react">React</option>
+                <option value="angular">Angular</option>
+            </optgroup>
+        </select><br>
+        <label>掌握程度：</label>
+        <textarea name="self-message" rows="4" cols="50" maxlength="100" placeholder="在此输入掌握程度"></textarea>
+        <br>
+        <label>自我评价：</label><br>
+        <textarea name="self-message2" rows="4" cols="50" maxlength="100" placeholder="在此输入对自身的评价"></textarea>
+        <div style="text-align: center" class="submit">
+            <input type="submit" name="submit" onclick="location.href='homework03(3).html'">
+            <input type="reset" name="reset">
+        </div>
+    </form>
+</div>
+
+</body>
+</html>

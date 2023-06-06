@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/test
+    username: root
+    password: 123456
+
+  jackson:
+    time-zone: GMT+8
+    date-format: yyyy-MM-dd
+    # 配置邮箱服务器，账号密码等
+
+

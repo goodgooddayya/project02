@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.carousel_map{
+    width: 840px;
+    height: 400px;
+    position: relative;
+    left: 12%;
+}
+.slide{
+    width: inherit;
+    height: inherit;
+    /*新增*/
+    overflow: hidden;/*隐藏滚动条*/
+    position: relative;
+}
+
+/*鼠标经过轮播图区域会停止动画*/
+.slide:hover .list{
+    animation: none;
+}
+/*将上边的radio单选按钮隐藏*/
+.slide input{
+    display: none;
+}
+/*鼠标放上去显示按钮*/
+.slide:hover .labels{
+    display: flex;
+}
+/*按钮位置*/
+.labels{
+    position: absolute;
+    bottom: 0.5em;/*1px = .05em  将按钮放置在下方*/
+    z-index: 1;/*这是用来实现同一个位置上不同层次的元素位置的属性。可以使得元素之间呈现出一定的层次感而不是单纯的被覆盖。*/
+    width: inherit;
+    justify-content: center;
+    display: none;/*鼠标移开隐藏按钮*/
+}
+
+/*按钮样式*/
+.labels label{
+    width: 1rem;
+    height: 1rem;
+    border-radius:50% ;
+    margin: 0 0.3rem;
+    border: 0.1rem solid #fff;
+    background-color: transparent;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+/*选择哪个按钮就有被点击的效果*/
+input[id=pic1]:checked~.labels label[for=pic1],
+input[id=pic2]:checked~.labels label[for=pic2],
+input[id=pic3]:checked~.labels label[for=pic3]{
+    background-color: #fff;
+    border: 0.1rem solid #ffffff;
+}
+/*按钮控件选择图片*/
+input[id=pic1]:checked~.list{
+    transform: translate(calc(0*840px));
+}
+input[id=pic2]:checked~.list{
+    transform: translate(calc(-1*840px));
+}
+input[id=pic3]:checked~.list{
+    transform: translate(calc(-2*840px));
+}
+input[id=pic4]:checked~.list{
+    transform: translate(calc(-3*840px));
+}
+
+/*取消固定样式*/
+ul{
+    list-style: none;
+}
+
+.list{
+    /*多加一张图进行过渡*/
+    width: calc(5*840px);
+    height: inherit;
+    position: relative;
+    /*设置动画效果*/
+    animation: move 15s /*ease 1s*/ infinite;
+}
+
+/*动画关键帧轮播*/
+@keyframes move {
+    0% {
+        transform: translate(calc(0 * 840px));
+    }
+    25% {
+        transform: translate(calc(-1 * 840px));
+    }
+    50% {
+        transform: translate(calc(-2 * 840px));
+    }
+    75% {
+        transform: translate(calc(-3 * 840px));
+    }
+    100% {
+        transform: translate(calc(-4 * 840px));
+    }
+}
+
+.picture-item{
+    width: 840px;
+    height: 400px;
+    float: left;
+}

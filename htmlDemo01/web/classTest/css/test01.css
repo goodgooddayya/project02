@@ -1,0 +1,26 @@
+/* 设置页面背景颜色为灰色 */
+body{
+    background-color:sandybrown;
+}
+/* 设置标题的字体大小为 36 像素，字体加粗，居中显示 */
+h1{
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/*类选择器*/
+.ai-body{
+    background-color: antiquewhite;
+}
+/*id选择器*/
+.a1{
+    color: black;
+}
+/*标签训责其*/
+a{
+    color: #e01313;
+}
+[href="3"]{
+    color: black;
+}

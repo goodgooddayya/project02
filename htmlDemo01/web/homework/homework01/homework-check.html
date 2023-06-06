@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>图书馆座位预约</title>
+</head>
+<body>
+<div>
+    <table>
+        <tr>
+            <td>
+                <img src="../../classTest/images/library.png">
+            </td>
+            <td>
+                <h1>图书馆订座管理</h1>
+            </td>
+        </tr>
+    </table>
+</div>
+<table>
+    <hr>
+    <tr>
+        <td>
+            <a href="#bookings-seat" target="_blank">座位预定</a>
+        </td>
+        <td>
+            <a href="#seat-check" >座位查询</a>
+        </td>
+        <td>
+            <a href="#bookings-check">预约查询</a>
+        </td>
+        <td>
+            <a href="#bookings-cancelled">预约取消</a>
+        </td>
+    </tr>
+</table><hr>
+<div id="bookings-seat">
+    <h2>预约座位</h2>
+    <form>
+        <label>自习室或阅览室：</label>
+        <input type="radio" name="room-type" value="study-room" checked>自习室
+        <input type="radio" name="room-type" value="reading-room">阅览室<br>
+        <label>座位号：</label>
+        <input type="number" name="seat-number" placeholder="请输入座位号" required min="1"><br>
+        <label>预约日期：</label>
+        <input type="date" name="date" required><br>
+        <label>开始时间：</label>
+        <input type="time" name="start-time" required><br>
+        <label>结束时间：</label>
+        <input type="time" name="end-time" required><br>
+        <label>所属院系：</label>
+        <select id="major" name="major">
+            <option value="software">计算机科学与工程学院</option>
+            <option value="fineArts">美术学院</option>
+            <option value="civil">土木工程学院</option>
+            <option value="foreign">外国语学院</option>
+            <option value="travel">旅院</option>
+            <option value="prior">预科</option>
+        </select><br>
+        <label>学号：</label>
+        <input type="text" name="student-id" placeholder="请输入学号" required><br>
+        <input type="submit" value="提交">
+        <input type="reset" value="重置">
+    </form>
+
+
+
+
+
+
+
+
+
+
+
+    <div id="seat-check">
+        <h2>座位查询</h2>
+        <form>
+            <label>自习室或阅览室：</label>
+            <input type="radio" name="room-type" value="study-room" checked>自习室
+            <input type="radio" name="room-type" value="reading-room">阅览室
+            <br>
+            <input type="submit" value="查询">
+        </form>
+        <!-- 在此处显示查询结果 -->
+    </div>
+    <hr>
+    <div id="bookings-check">
+        <h2>预约查询</h2>
+        <form>
+            <label>学号：</label>
+            <input type="text" name="student-id" required>
+            <br>
+            <input type="submit" value="查询">
+        </form>
+        <!-- 在此处显示查询结果 -->
+    </div>
+    <hr>
+    <div id="bookings-cancelled">
+        <h2>预约取消</h2>
+        <form>
+            <label>学号：</label>
+            <input type="text" name="student-id" required>
+            <br>
+            <label>预约日期：</label>
+            <input type="date" name="date" required>
+            <br>
+            <label>开始时间：</label>
+            <input type="time" name="start-time" required>
+            <br>
+            <input type="submit" value="取消预约">
+        </form>
+    </div>
+    <hr>
+</div>
+<a href="#" target="_blank">常见问题</a> <a href="#" target="_blank">联系客服</a>
+</body>
+</html>

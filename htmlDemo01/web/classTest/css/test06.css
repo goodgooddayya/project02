@@ -1,0 +1,51 @@
+/*
+.container{
+    !*类似于float的作用*!
+    display: flex;!*变成弹性盒子容器*!
+    !*flex-direction: column-reverse;!*方向 从下往上*!*!
+    flex-wrap: wrap;!*允许换行*!
+    flex-grow: 1;!*允许平分 能放大*!
+}
+.flexitem{
+    width: 200px;
+    padding: 20px;
+    !*线的宽度 样式 颜色*!
+    border: 1px dashed #037270;
+    margin: 10px;
+}
+.flexitem1{
+    background-color: #555557;
+    text-align: center;
+   !* order: 1;!*值越大越后*!*!
+    flex-grow: 2;
+    flex-basis: 300px;
+    flex-shrink: 0;!*不允许缩小*!
+    !*上面三行简写 同样的*!
+    flex:2 0 300px;
+}
+*/
+*{
+    padding: 0;
+    margin: 0;
+}
+.container{
+    display: flex;
+    height: 100vh;
+}
+.left{
+    flex: 0 0 200px;
+    background-color: #555557;
+}
+.right{
+    display: flex;/*嵌套弹性盒子*/
+    flex-grow: 1;/*默认值为0 且大小为内容的宽度*/
+    background-color: lightgoldenrodyellow;
+    flex-direction: column;/*上下布局*/
+}
+.r-top{
+    flex-basis: 80px;
+    background-color: white;
+}
+.r-bottom{
+    flex-grow: 1;
+}

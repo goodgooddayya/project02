@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .red {color: red;}
+        .bold {font-weight: bold;}
+    </style>
+
+    <script>
+        /*const add = (x,y) => x+y;//定一个匿名函数
+        var add2=function (x,y){
+            return x+y;
+        }
+
+        const fruits = ['apple', 'banana', 'orange', 'peach'];
+        fruits.sort();
+        console.log(fruits);
+        fruits.sort(
+            (a,b)=>//接收一个比较函数
+            b.localeCompare(a)// 比较字符串大小}
+        )
+        console.log(fruits);*/
+    </script>
+</head>
+<body>
+    <p id="myPara">好好学习！天天向上</p>
+    <button onclick="addClasses()">添加样式</button>
+    <button onclick="fun2()">去除样式</button>
+    <script>
+
+        function addClasses(){
+            const myPara=document.getElementById("myPara");
+            myPara.classList.add("red","bold");
+        }
+    </script>
+</body>
+</html>

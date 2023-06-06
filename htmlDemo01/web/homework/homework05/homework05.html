@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <title>图书馆订座首页</title>
+    <link rel="stylesheet" href="../homework-css/homework05.css">
+    <link rel="stylesheet" href="../homework-css/homework05-.css">
+    <link rel="stylesheet" href="../homework-css/homework05(3).css">
+</head>
+<body>
+    <div class="container">
+
+        <div class="top">
+            <div class="title">
+                <img src="../../classTest/images/library.png" alt="图书馆">
+                <span style="font-size: 30px;color: white">图书馆座位管理系统</span>
+            </div>
+            <div class="login">
+                <a href="#" onclick="showModal()" class="nav">登录</a>
+                <img src="../pictures/user-pictures.png" alt="用户">
+            </div>
+            <!-- 模态框 -->
+            <div class="modal" id="login-modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <span class="close" onclick="closeModal()">&times;</span>
+                        <h2>Login</h2>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <label for="username">账号：</label>
+                            <input type="text" id="username" name="username">
+                            <label for="password">密码：</label>
+                            <input type="password" id="password" name="password">
+                            <button type="button" onclick="showModal()" class="btn">登录</button>
+                        </form>
+                        <span><a href="#" style="color: blue">忘记密码？</a> </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="menu" id="nav">
+            <ul class="menu1">
+                <li>
+                    <a href="#" target="_self" class="nav active">首页</a>
+                </li>
+                <li>
+                    <a href="#" class="nav">座位预约</a>
+                </li>
+                <li>
+                    <a href="#" class="nav">预约规则</a>
+                </li>
+
+                <li>
+                    <!-- 点击超链接时触发showModal()函数 -->
+                    <div class="dropdown">
+                        <button class="dropbtn" onclick="menuFunc()">其他菜单</button>
+                        <div class="dropdown-content" id="myDropdown">
+                            <a href="#" style="color: #333333">备用链接一</a>
+                            <a href="#" style="color: #333333">备用链接二</a>
+                            <a href="#" style="color: #333333">备用链接三</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+
+        <div class="middle">
+            <div class="left">
+                <div class="slider-container">  <!-- 图片轮播器的容器 -->
+                    <div class="slider">  <!-- 存放图片的容器 -->
+                        <div class="slide">  <!-- 单张图片和标题的容器 -->
+                            <img src="../pictures/library01.png" alt="标题一">  <!-- 图片路径和标题 -->
+                            <div class="caption">馆内采景一</div>  <!-- 标题 -->
+                        </div>
+                        <div class="slide">
+                            <img src="../pictures/library02.png" alt="标题二">
+                            <div class="caption">馆内采景二</div>
+                        </div>
+                        <div class="slide">
+                            <img src="../pictures/library03.png" alt="标题三">
+                            <div class="caption">馆内采景三</div>
+                        </div>
+                    </div>
+                    <div class="arrows">  <!-- 存放左、右箭头的容器 -->
+                        <div class="arrow prev">&lt;</div>  <!-- 左箭头 -->
+                        <div class="arrow next">&gt;</div>  <!-- 右箭头 -->
+                    </div>
+
+                </div>
+
+                <div class="seat-position-top">
+                    <br>
+                    <h2 style="text-align: center">校区图书馆座位列表</h2><hr>
+                    <div class="seat-position-middle">
+                        <div class="one item">
+                            <img src="../pictures/library01.png" style="width: 150px;height: 100px;">
+                            <br>01校区图书馆<br>
+                            <button class="button">座位查看</button>
+                        </div>
+                        <div class="two item">
+                            <img src="../pictures/library02.png" style="width: 150px;height: 100px">
+                            <br>02校区图书馆<br>
+                            <button class="button">座位查看</button>
+                        </div>
+                        <div class="three item">
+                            <img src="../pictures/library03.png" style="width: 150px;height: 100px">
+                            <br>03校区图书馆<br>
+                            <button class="button">座位查看</button>
+                        </div>
+                        <div class="four item">
+                            <img src="../pictures/library04.png" style="width: 150px;height: 100px">
+                            <br>04校区图书馆<br>
+                            <button class="button">座位查看</button>
+                        </div>
+                        <div class="five item">
+                            <img src="../pictures/library02.png" style="width: 150px;height: 100px">
+                            <br>05校区图书馆<br>
+                            <button class="button">座位查看</button>
+                        </div>
+                        <div class="six item">
+                            <img src="../pictures/library03.png" style="width: 150px;height: 100px">
+                            <br>06校区图书馆<br>
+                            <button class="button">座位查看</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <div class="right">
+                    <div class="inform-box1-title">
+                        <img src="../pictures/inform.png" alt="最新通知">
+                        <span style="color: white;font-size: 15px;">最新通知</span>
+                    </div>
+                    <div class="inform-box1-next">
+                        <span>暂无通知</span>
+                    </div>
+                    <div class="inform-box1-title">
+                        <img src="../pictures/questions.png" alt="常见问题">
+                        <span style="color: white;font-size: 15px;">常见问题</span>
+                    </div>
+                    <div class="inform-box1-next">
+                        <table>
+                            <tr>
+                                <a href="#">关于无法进行登录</a><br>
+                                <a href="#">出现密码忘记等情况</a><br>
+                                <a href="#">关于账号被禁止登陆问题</a>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="bottom">
+            Copyright © 2023 上学真难公司所有
+        </div>
+    </div>
+</body>
+<script src="../js/js05-.js"></script>
+<script src="../js/js05.js"></script>
+</html>

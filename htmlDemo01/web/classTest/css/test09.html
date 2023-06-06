@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>使用classList</title>
+  <meta charset="UTF-8">
+  <style>
+    .red {color: red;}
+    .bold {font-weight: bold;}
+    .margin-top {margin-top: 10px}
+  </style>
+</head>
+<body>
+<p id="myPara">不经历风雨，怎么见彩虹!</p>
+<button id="btnAdd">添加样式</button>
+<button onclick="removeClasses()">去除样式</button>
+<script>
+  function addClasses() {
+    const myPara = document.getElementById("myPara");
+    myPara.classList.add("red", "bold","margin-top");
+  }
+  var add=document.getElementById("btnAdd");
+  add.addEventListener("click",addClasses);
+  function removeClasses() {
+    const myPara = document.getElementById("myPara");
+    myPara.classList.remove("red", "bold");
+  }
+</script>
+</body>
+</html>
+

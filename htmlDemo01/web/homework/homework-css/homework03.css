@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: lightgoldenrodyellow;
+    scroll-behavior: auto;
+}
+.sign-up{
+    position: absolute;
+    top: 5%;
+    left: calc(50% - 150px);
+    margin: 1px;
+    /*border: 1px solid green;*/
+    width: 300px;
+    padding: 5px;
+}
+.submit{
+    margin: 10px;
+}

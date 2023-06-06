@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人简历注册</title>
+    <link rel="stylesheet" href="../homework-css/homework03-check.css">
+</head>
+<body>
+    <div class="container">
+        <h3 style="text-align: center">个人信息注册</h3><hr>
+        <form class="sign-up">
+            <label>姓名：</label>
+            <input type="text" name="per-name" required>
+            <br>
+            <label>性别:</label>
+            <input type="radio" name="gender" value="female" checked>女
+            <input type="radio" name="gender" value="male">男
+            <br>
+            <label>出生年月日</label>
+            <input type="date" name="birth-data" required>
+            <label>籍贯：</label>
+            <select>
+                <option>广东省</option>
+            </select>
+            <label>奖励情况</label>
+            <br>
+            <textarea></textarea>
+            <br>
+            <input type="submit" onclick="location.href='homework03-check02.html'">
+        </form>
+    </div>
+</body>
+</html>

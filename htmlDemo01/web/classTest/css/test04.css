@@ -1,0 +1,16 @@
+.main{
+    width: 500px;
+    height: 500px;
+    position: relative;
+    border: #e01313;
+}
+.main p{
+    width: 400px;
+    height: 200px;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}

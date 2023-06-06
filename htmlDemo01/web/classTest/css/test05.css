@@ -1,0 +1,53 @@
+*{
+    padding: 0;
+    margin: 0;
+}/*去除内边距和外边距*/
+.container{
+    height: 100vh;
+    /*background-color:red;*/
+
+}
+.left{
+    background-color: #555557;
+    width: 200px;
+    height: 100%;
+    float: left;
+}
+.left a{
+     display: block;/*变成块元素，宽度和父元素一样*/
+     color: white;
+     text-decoration: none;/*去除下划线*/
+    background-color: grey;
+     padding: 10px 10px 10px 30px;
+     margin-top: 10px;
+ }
+.left a:hover{
+    background-color: #dddddd;
+    color: cornflowerblue;
+}
+.right{
+    width: calc(100% - 200px);
+    height: 100%;
+    background-color: aliceblue;
+    float: right;
+}
+.r-top{
+    color: white;
+    background-color: darkslategray;
+    height: 60px;
+    padding: 20px;
+    /*margin-bottom: 10px;!*下外边距*!*/
+}
+.r-bottom{
+    height: calc(100% - 70px);
+}
+
+#main{
+    width: 100%;
+    height: 100%;
+    border:none;/*去除边框*/
+}
+.footer{
+    clear: both;
+    background-color: white;
+}

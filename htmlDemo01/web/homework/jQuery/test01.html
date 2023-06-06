@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+</head>
+<body>
+    <button class="btn">这是一个测试按钮</button>
+    <p class="red">我是段落1</p>
+    <p>我是段落2</p>
+    <p class="red">我是段落3</p>
+
+    <div class="content">
+        <p>我是段落1</p>
+        <p>我是段落2</p>
+        <p>我是段落3</p>
+    </div>
+    <ul>
+        <span>我是ul的span1</span>
+        <li id="box">我是li1 <span>我是li1的span1</span></li>
+        <li>我是li2 <span>我是li2的span2</span></li>
+        <li>我是li3 <span>我是li3的span3</span></li>
+        <span>我是ul的span2</span>
+    </ul>
+
+    <table cellspacing="0px" cellpadding="10px" border="1px">
+        <tr><td>张三</td><td>男</td><td>21</td></tr>
+        <tr><td>李四</td><td>女</td><td>22</td></tr>
+        <tr><td>王五</td><td>男</td><td>23</td></tr>
+        <tr><td>赵六</td><td>女</td><td>24</td></tr>
+    </table>
+
+
+    <script>
+        $('.btn').css('background','red')
+        $('.red').css('background','red')
+        $('.content *').css('background','green')
+        //给ul下的span加上css修饰  子代选择器
+        $('ul>span').css('background','blue')
+        //后代选择器
+        $('ul span').css('background','black')
+        //兄弟选择器   一个兄弟用+号  后边所有兄弟用~号
+        $('#box+li').css('background','yellow')
+        //表格隔行变色 :even代表选取下标为偶数的行 :odd为奇数  :first为第一行  :last最后一行
+        $('tr:even').css('background','red')
+    </script>
+</body>
+</html>

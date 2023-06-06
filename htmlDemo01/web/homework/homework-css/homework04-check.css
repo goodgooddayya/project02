@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.picture-div{
+    width: 840px;
+    height: 400px;
+    position: relative;
+}
+
+.slide{
+    width: inherit;
+    height: inherit;
+    overflow: hidden;
+    position: relative;
+}
+
+.slide:hover .list{
+    animation: none;
+}
+.slide input{
+    display: none;
+}
+.slide:hover .labels{
+    display: flex;
+}
+
+.labels{
+    position: absolute;
+    bottom: 0.5em;
+    z-index:1;
+    display: none;
+}
+
+input[id=pic1]:checked~.labels
+label[for=pic1],
+input[id=pic2]:checked~.labels
+label[for=pic2],
+input[id=pic1]:checked~.labels
+label[for=pic2]{
+    background-color: white;
+    border: 0.1rem solid white;
+}
+
+input[id=pic1]:checked~.list{
+    transform: translate(calc(0*840px));
+}
+input[id=pic2]:checked~.list{
+    transform: translate(calc(-1*840px));
+}
+input[id=pic2]:checked~.list{
+    transform: translate(calc(-2*840px));
+}
+ul{
+    list-style: none;
+}
+
+.list{
+    width: calc(4*840px);
+    height: inherit;
+    position: relative;
+
+    animation: move 15s infinite;
+}
+
+@keyframes move {
+    0%{
+        transform: translate(calc(0*840px));
+    }
+    33%{
+        transform: translate(calc(-1*840px));
+    }
+    66%{
+        transform: translate(calc(-2*840px));
+    }
+
+    100%{
+        transform: translate(calc(-3*840px));
+    }
+
+}
+.picture-item{
+    width: 840px;
+    height: 400px;
+    float: left;
+ }
